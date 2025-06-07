@@ -54,7 +54,10 @@ int main() {
 
     // Shuffle data
     int indices[SAMPLES];
-    for (int i = 0; i < SAMPLES; ++i) indices[i] = i;
+    // Initialize indices array with sequential values from 0 to SAMPLES-1
+    for (int i = 0; i < SAMPLES; ++i) {
+        indices[i] = i;
+    }
     srand(0);
     shuffle(indices, SAMPLES);
 
